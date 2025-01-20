@@ -24,14 +24,14 @@ class _spleshScreenState extends State<spleshScreen> {
     if(isLogin == false){
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const onBoarding(),));
     }else{
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => homeScreen(),));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const homeScreen(),));
     }
   }
 
   @override
   void initState() {
     // TODO: implement initState
-    Timer.periodic(Duration(seconds: 4), (timer) {
+    Timer.periodic(const Duration(seconds: 4), (timer) {
       // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => onBoarding(),));
       skipLoginScreen();
     },);
@@ -49,7 +49,7 @@ class _spleshScreenState extends State<spleshScreen> {
             child: Container(
               height: 250,
               width: 250,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage("assets/ecom2.gif")
                 )

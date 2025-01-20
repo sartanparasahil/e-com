@@ -235,7 +235,6 @@ class _registerScreenState extends State<registerScreen> {
                                       adduser();
                                       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const homeScreen(),));
                                     }
-
                                   },
                                   icon: const Icon(
                                     Icons.arrow_forward,

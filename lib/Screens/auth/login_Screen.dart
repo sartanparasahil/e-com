@@ -48,7 +48,7 @@ class _logInScreenState extends State<logInScreen> {
             sharedPref.setString("USER-EMAIL", resBodyData[0]["user_email"]);
 
             Navigator.pushAndRemoveUntil(
-                context, MaterialPageRoute(builder: (context) => homeScreen()),(route)=>false);
+                context, MaterialPageRoute(builder: (context) => const homeScreen()),(route)=>false);
           }else{
             Fluttertoast.showToast(msg: "Password is incorrect");
           }
@@ -71,7 +71,7 @@ class _logInScreenState extends State<logInScreen> {
     if(isLogin == false){
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const onBoarding(),));
     }else{
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => homeScreen(),));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const homeScreen(),));
     }
   }
 
@@ -87,7 +87,7 @@ class _logInScreenState extends State<logInScreen> {
               child: Container(
                 height: 100,
                 width: 100,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                   image: AssetImage("assets/user.png")
                   )
@@ -98,7 +98,7 @@ class _logInScreenState extends State<logInScreen> {
               padding: const EdgeInsets.only(top: 30,left: 10),
               child: Text("Welcome back you've been missed!",style: TextStyle(color: Theme.of(context).highlightColor,fontWeight: FontWeight.bold,fontSize: 20),),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Form(
